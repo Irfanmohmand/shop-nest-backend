@@ -2,9 +2,17 @@ const express = require("express");
 const dotenv = require("dotenv");
 const { readdirSync } = require("fs");
 const { connectDb } = require("./connection");
+const cors = require("cors");
+
 dotenv.config();
 
 const app = express();
+
+
+// making connection with frontend using cors
+app.use(cors());
+// Without using json the json file not be supported
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("<h1>Hello Guys</h1>")
@@ -17,6 +25,7 @@ app.get("/", (req, res) => {
 readdirSync("./routes").map((route) => {
   app.use("/api", require(`./routes/${route}`))
 })
+
 
 const port = process.env.PORT || 3000;
 
