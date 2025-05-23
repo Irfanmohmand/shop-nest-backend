@@ -1,3 +1,6 @@
- TO change the current branch name
- 1. git push origin --delete old-branch-name
- 2. git push origin -u new-branch-name
+//TO change the current branch name
+//1. git push origin--delete old - branch - name
+//2. git push origin - u new- branch - name
+
+// status
+// So yes — if you give the wrong status in your backend, Axios will respond based on that status, not the success: true/false in the JSON.
