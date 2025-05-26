@@ -30,4 +30,6 @@ const verifyToken = (req, res, next) => {
       message: "Internal Server Error."
     })
   }
-}
+};
+
+module.exports = { verifyToken }

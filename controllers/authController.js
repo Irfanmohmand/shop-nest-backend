@@ -1,7 +1,7 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const { generateAccessToken } = require("../helpers/accessToken");
-const { generateRefreshToken } = require("./refreshToken");
+const { generateRefreshToken } = require("../helpers/refreshToken");
 
 const signup = async (req, res) => {
   const { username, email, password, accountType } = req.body;
